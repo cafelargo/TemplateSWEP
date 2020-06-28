@@ -3,5 +3,5 @@
 	"type"		:	"ServerContent",
 	"tags"		:	[ "fun", "comic" ],
 	"ignore"	:
-	[]
+	["*.git","*.txt"]
 }
