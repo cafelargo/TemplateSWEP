@@ -13,7 +13,6 @@ end
 if CLIENT then
    -- Client viewpoint vals
    SWEP.PrintName          = "Template Weapon"
-   SWEP.Slot               = 6 -- (See SWEP.Kind below)
    SWEP.ViewModelFOV       = 70 -- How much of the first person viewmodel is seen
    SWEP.ViewModelFlip      = true -- If true, the viewmodel is on the left
    SWEP.DrawCrossHair      = false -- Does the client draw its own crosshair over the default ones
@@ -23,9 +22,10 @@ if CLIENT then
    -- The information shown in the buy menu
    SWEP.EquipMenuData      =
    {
-      type = "Weapon",
-      desc = "This is a template weapon"
-   };
+      type = "item_weapon",
+      name = "weapon_template_name",
+      desc = "weapon_tempalte_desc"
+   }
 end
 
 -- What weapon this is based upon (always use weapon_tttbase when creating a ttt/2 weapon)
