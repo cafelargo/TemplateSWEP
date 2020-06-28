@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+ "$basetexture" "vgui/ttt/blue_template_icon.vtf"
+ "$vertexcolor" 1
+ "$vertexalpha" 1
+ "$translucent" 1
+}

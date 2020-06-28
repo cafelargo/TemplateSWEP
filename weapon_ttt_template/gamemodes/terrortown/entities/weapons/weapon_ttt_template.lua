@@ -1,18 +1,13 @@
 -- Template for creating simple custom ttt2 weapons --
 
--- Tell the server to send this file to clients when they join
 -- SERVER and CLIENT are global variables which return true if the script is being executed if its being executed on the server or client
 print("Loaded-----------------------------------------------------------")
 if SERVER then
-   -- Shares the lua file with the client if they don't have the addon
-   AddCSLuaFile("weapon_ttt_template.lua")
+   -- Shares the specified file with the client (if blank shares current file)
+   AddCSLuaFile()
 
-   -- Shares the buy menu icon with the client if they don't have the addon
-   --[[
-      It's very important to create a globally unique name for this because the Gmod
-      client will look for the given path locally to display it. So if there are two
-      identical icon names the client may display the incorrect one
-   --]]
+   -- Shares the buy menu icon with the client
+
    resource.AddFile("materials/VGUI/ttt/icon_myserver_ak47.vmt")
 end
 
@@ -20,8 +15,8 @@ if CLIENT then
    -- Client viewpoint vals
    SWEP.PrintName          = "Template Weapon"
    SWEP.Slot               = 6 -- (See SWEP.Kind below)
-   SWEP.ViewModelFOV       = 70
-   SWEP.ViewModelFlip      = true
+   SWEP.ViewModelFOV       = 70 -- How much of the first person viewmodel is seen
+   SWEP.ViewModelFlip      = true -- If true, the viewmodel is on the left
    SWEP.DrawCrossHair      = false -- Does the client draw its own crosshair over the default ones
 
    -- Client menu data
